@@ -526,6 +526,12 @@ textarea:focus {
   box-shadow: 4px 4px 9px 0px var(--secondary-color);
 }
 
+@media screen and (max-width: 500px) {
+  .form-container {
+    margin: 1rem 0.5rem;
+  }
+}
+
 /*
 
 PORTFOLIO

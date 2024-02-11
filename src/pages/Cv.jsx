@@ -21,7 +21,7 @@ const Cv = () => {
       ));
     }
   }
-  console.log(data);
+  //console.log(data);
   return (
     <main className="cv-main">
       <h1>CV</h1>
