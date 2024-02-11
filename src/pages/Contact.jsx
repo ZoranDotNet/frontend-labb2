@@ -37,7 +37,7 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              name={from_name}
+              name="from_name"
               placeholder="Namn"
               required
             />
@@ -46,7 +46,7 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              name={email}
+              name="email"
               placeholder="Email"
               required
             />
@@ -61,7 +61,7 @@ const Contact = () => {
 
             <label>Meddelande</label>
             <br />
-            <textarea name={message} cols="50" rows="8"></textarea>
+            <textarea name="message" cols="50" rows="8"></textarea>
             <br />
             <input type="submit" value="Skicka" className="btn" />
           </form>
