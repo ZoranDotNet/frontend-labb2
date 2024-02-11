@@ -1,0 +1,103 @@
+{
+  "job": [
+    {
+      "id": 1,
+      "company": "Fastighetsbyrån Hudiksvall",
+      "title": "Fastighetsmäklare 2017-2023",
+      "description": "Här arbetade jag som fastighetsmäklare i Hudiksvalls och Nordanstigs kommun."
+    },
+
+    {
+      "id": 2,
+      "company": "Föräldraledig",
+      "title": "Ledig 2016-2017",
+      "description": "Var hemma med min dotter i ca 1 år."
+    },
+
+    {
+      "id": 3,
+      "company": "Bjurfors Värmdö",
+      "title": "Fastighetsmäklare 2014-2015",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus fugit perferendis suscipit ea dolorem qui ut, odit beatae labore itaque "
+    },
+
+    {
+      "id": 4,
+      "company": "Snickarglädje i Stockholm",
+      "title": "Snickare 2013-2014",
+      "description": "Efter 9 år i mäklarbranschen kände jag att det var tid att göra något annat. Arbetade som snickare och kände att det var väldigt utvecklande"
+    },
+
+    {
+      "id": 5,
+      "company": "Bjurfors Nacka",
+      "title": "Fastighetsmäklare 2012",
+      "description": "Efter att ha arbetat över 7 år som mäklare på Värmdö gjorde jag ett byte till grannkommunen Nacka."
+    },
+
+    {
+      "id": 6,
+      "company": "HusmanHagberg Värmdö",
+      "title": "Fastighetsmäklare 2004-2011",
+      "description": "Här gjorde jag min praktik under min mäklarutbildning vilket senare blev en anställning. Har här arbetat med försäljning av fastigheter, bostadsrätter och även ansvarat för olika projekt inom nyproduktion. Ett stort kontor som var marknadsledande på orten."
+    }
+  ],
+
+  "education": [
+    {
+      "id": 1,
+      "name": "Systemutvecklare",
+      "school": "Edugrade Hudiksvall 2023-2025",
+      "description": "Påbörjat utbildning till systemutvecklare"
+    },
+
+    {
+      "id": 2,
+      "name": "Företagsekonomi A & B",
+      "school": "Stockholms Universitet 2001",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis blanditiis adipisci perferendis voluptatem totam explicabo unde illo officiis dignissimos deserunt!"
+    },
+
+    {
+      "id": 3,
+      "name": "Beskattningsrätt",
+      "school": "Stockholms Universitet 2002",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro voluptate ut similique aspernatur, ratione non vero deserunt inventore perspiciatis! Amet.e"
+    },
+
+    {
+      "id": 4,
+      "name": "Juridisk översiktskurs",
+      "school": "Mitthögskolan Östersund 2002",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam vel, provident fugit possimus culpa accusamus aliquam eos? Nisi, ullam temporibus."
+    },
+
+    {
+      "id": 5,
+      "name": "Byggnadsteknik",
+      "school": "Högskolan i Gävle 2003",
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, vel sapiente saepe nesciunt et consectetur animi fugiat quidem rerum adipisci?"
+    },
+
+    {
+      "id": 6,
+      "name": "Fastighetsförmedling",
+      "school": "Högskolan i Gävle 2003-2004",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, commodi rerum ducimus recusandae labore aspernatur repellat iusto natus doloremque nihil!"
+    },
+
+    {
+      "id": 7,
+      "name": "Marknadsföring",
+      "school": "Högskolan i Gävle 2003",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam tempore aperiam quos impedit nemo ipsa iure hic iusto perferendis."
+    },
+
+    {
+      "id": 8,
+      "name": "Fastighetsvärdering",
+      "school": "Högskolan i Gävle 2003",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde veniam tempore aperiam quos impedit nemo ipsa iure hic iusto perferendis."
+    }
+  ]
+}
