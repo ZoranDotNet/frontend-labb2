@@ -21,12 +21,12 @@ const Contact = () => {
           console.log("SUCCESS!");
           form.current.reset();
 
-          alert("Thank you for your mail.");
+          alert("Tack för ditt mail.");
         },
         (error) => {
           console.log("FAILED...", error.text);
 
-          alert("Failed to send email. Please try again later.");
+          alert("Något gick tyvärr fel. Vänligen försök igen.");
         }
       );
   };

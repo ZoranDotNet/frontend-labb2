@@ -45,7 +45,7 @@ const Portfolio = () => {
     <>
       <main>
         <div className="main-container">
-          <h1>My portfolio</h1>
+          <h1>Portfolio</h1>
           <div className="portfolio-wrapper">
             <div className="box">
               <img src={csharp} alt="C# logo" />
