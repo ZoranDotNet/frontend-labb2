@@ -26,6 +26,7 @@ img {
 /* 
 Index
 */
+
 body {
   font-family: poppins, sans-serif;
   background-color: var(--background-color);
@@ -212,6 +213,7 @@ nav a:hover {
   .about-me {
     flex-direction: column;
   }
+
   .about-me-pic {
     margin: 2rem auto;
   }
@@ -438,6 +440,13 @@ ABOUT ME
   margin-top: 6rem;
   padding: 1rem 2rem;
   margin-bottom: 8rem;
+}
+
+@media screen and (max-width: 700px) {
+  .main-info {
+    padding: 1rem 1rem;
+    margin: 0;
+  }
 }
 
 /*
