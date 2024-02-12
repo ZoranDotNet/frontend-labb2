@@ -726,7 +726,11 @@ Portfolio-table
   align-items: center;
 
   .spinner {
-    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+
+  .loading {
+    margin-left: 1rem;
   }
 }
 
