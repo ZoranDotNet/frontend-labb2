@@ -5,6 +5,7 @@ import cssicon from "../assets/css-icon.svg";
 import jsicon from "../assets/js-icon.svg";
 import reacticon from "../assets/react-icon.svg";
 import githubicon from "../assets/github-mark.svg";
+import DotLoader from "react-spinners/DotLoader";
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -88,7 +89,18 @@ const Portfolio = () => {
               </a>
             </div>
           </div>
-          {isLoading && <p className="loading">Loading...</p>}
+          {isLoading && (
+            <div className="portfolio-loader">
+              <DotLoader
+                className="spinner"
+                color="white"
+                cssOverride={{}}
+                size={25}
+                speedMultiplier={2}
+              />{" "}
+              <p className="loading">Loading...</p>
+            </div>
+          )}
           {!isLoading && (
             <div className="github-wrapper">
               <h2 className="github-heading">Github Repositories</h2>
