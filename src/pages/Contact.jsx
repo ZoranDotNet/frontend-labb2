@@ -1,8 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Modal from "../components/Modal";
 
 const Contact = () => {
   const form = useRef();
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [modalContent, setModalContent] = useState({});
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,14 +24,26 @@ const Contact = () => {
           console.log("SUCCESS!");
           form.current.reset();
 
-          alert("Tack för ditt mail.");
+          setModalContent({
+            title: "Success",
+            message: "Tack för ditt mail.",
+          });
+          setIsModalVisible(true);
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.log("FAILED...", error);
 
-          alert("Något gick tyvärr fel. Vänligen försök igen.");
+          setModalContent({
+            title: "Error",
+            message: "Något gick tyvärr fel. Vänligen försök igen.",
+          });
+          setIsModalVisible(true);
         }
       );
+  };
+
+  const closeModal = () => {
+    setIsModalVisible(false);
   };
 
   return (
@@ -71,6 +86,12 @@ const Contact = () => {
             <input type="submit" value="Skicka" className="btn" />
           </form>
         </div>
+        <Modal
+          isVisible={isModalVisible}
+          closeModal={closeModal}
+          title={modalContent.title}
+          message={modalContent.message}
+        />
       </main>
     </>
   );

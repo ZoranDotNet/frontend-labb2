@@ -32,12 +32,8 @@ const Home = () => {
             </h2>
             <Modal
               isVisible={isVisible}
-              renderModal={() => {
-                //console.log(counter);
-                return counter === 1
-                  ? { message: shortMsg }
-                  : { message: longMsg, title: title };
-              }}
+              title={counter === 1 ? null : title}
+              message={counter === 1 ? shortMsg : longMsg}
               closeModal={closeModal}
             />
             <p>

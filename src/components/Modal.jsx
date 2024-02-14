@@ -1,16 +1,13 @@
 import styles from "./modal.module.css";
 
-const Modal = ({ isVisible, renderModal, closeModal }) => {
-  const modalContent = renderModal();
+const Modal = ({ isVisible, closeModal, message, title }) => {
   return (
     <div>
       {isVisible && (
         <div className={styles.overlay}>
           <div className={styles.modal}>
-            {modalContent.title && (
-              <p className={styles.title}>{modalContent.title}</p>
-            )}
-            <p className={styles.content}>{modalContent.message}</p>
+            {title && <p className={styles.title}>{title}</p>}
+            <p className={styles.content}>{message}</p>
             <button className={styles.modalBtn} onClick={closeModal}>
               Close
             </button>
