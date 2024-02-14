@@ -8,7 +8,7 @@ const Home = () => {
 
   const shortMsg = "Nyfiken på Systemutvecklare?";
 
-  const title = "Systemutvecklare enligt Wikipedia:";
+  const title = "Enligt Wikipedia:";
   const longMsg =
     "Systemutvecklare designar och utvecklar datorsystem eller delar av datorsystem med utgångspunkt i den verksamhet tekniken skall ge stöd åt. Systemutvecklarens utgångspunkt är därför människorna som använder eller påverkas av teknik snarare än tekniken i sig. Förenklat kan man tala om systemering där verksamhetens behov (kraven) översätts till realiserbara funktioner respektive programmering där realisering av dessa funktioner sker, som två huvudsakliga kärnuppgifter i det arbete som utförs av denna yrkeskategori. Systemutvecklare måste inte designa hela datorsystemet utan kan också programmera på den delen som användaren inte ser, medan en IT-designer kan sköta utseendet och känslan av datorsystemet.";
 
