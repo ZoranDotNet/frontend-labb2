@@ -25,9 +25,9 @@ const Portfolio = () => {
           throw new Error("Bad fetch response");
         }
 
-        const projectData = await response.json();
+        const data = await response.json();
 
-        setProjectData(projectData);
+        setProjectData(data);
       } catch (error) {
         setError(error);
       } finally {
@@ -97,7 +97,7 @@ const Portfolio = () => {
                 cssOverride={{}}
                 size={25}
                 speedMultiplier={2}
-              />{" "}
+              />
               <p className="loading">Loading...</p>
             </div>
           )}
