@@ -6,16 +6,15 @@ import jsicon from "../assets/js-icon.svg";
 import reacticon from "../assets/react-icon.svg";
 import githubicon from "../assets/github-mark.svg";
 import DotLoader from "react-spinners/DotLoader";
+import Modal from "../components/Modal";
 
 const Portfolio = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [projectData, setProjectData] = useState([]);
   const [error, setError] = useState();
-  const [showBankAppModal, setShowBankAppModal] = useState(false);
-  const [showLabb1Modal, setShowLabb1Modal] = useState(false);
-  const [showEgetProjektModal, setShowEgetProjektModal] = useState(false);
-  const [showLabb2Modal, setShowLabb2Modal] = useState(false);
-  const [showReactModal, setShowReactModal] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalHeader, setModalHeader] = useState("");
+  const [modalText, setModalText] = useState("");
 
   const URL = "https://api.github.com/users/ZoranDotNet/repos";
 
@@ -47,6 +46,16 @@ const Portfolio = () => {
     return <h2>Something went wrong! Please try again.</h2>;
   }
 
+  function openModal(modalHeader, modalText) {
+    setModalHeader(modalHeader);
+    setModalText(modalText);
+    setIsModalOpen(true);
+  }
+
+  function closeModal() {
+    setIsModalOpen(false);
+  }
+
   return (
     <>
       <main>
@@ -58,7 +67,12 @@ const Portfolio = () => {
               <h3>Bank app</h3>
               <p>Grupparbete där vi skapade en bank</p>
               <button
-                onClick={() => setShowBankAppModal(true)}
+                onClick={() =>
+                  openModal(
+                    "C# BankApp",
+                    "Som slutarbete i vår C# kurs gjorde vi ett grupparbete. Vi fick en backlog där vi skulle göra en bank. Som administratör till banken skulle man kunna öppna konton, göra insättningar, överföringar samt öppna konton i utländsk valuta. Vi skulle även ha olika användarkonton med olika rättigheter och login."
+                  )
+                }
                 className="read-more"
               >
                 Read more
@@ -69,7 +83,12 @@ const Portfolio = () => {
               <h3>Labb 1</h3>
               <p>Skapa en personlig hemsida utan javascript</p>
               <button
-                onClick={() => setShowLabb1Modal(true)}
+                onClick={() =>
+                  openModal(
+                    "Labb1",
+                    "I vår Frontend kurs så ska vi bygga en egen hemsida. Vi använder endast HTML och CSS, inga ramverk."
+                  )
+                }
                 className="read-more"
               >
                 Read more
@@ -80,7 +99,12 @@ const Portfolio = () => {
               <h3>Eget projekt</h3>
               <p>Skapat hemsida med html och css utan ramverk</p>
               <button
-                onClick={() => setShowEgetProjektModal(true)}
+                onClick={() =>
+                  openModal(
+                    "Eget Projekt",
+                    "Har gjort flera egna projekt. Har byggt några sidor och börjat lära mig mer och mer. Har även testat på Bootstrap och gjort några projekt."
+                  )
+                }
                 className="read-more"
               >
                 Read more
@@ -91,7 +115,12 @@ const Portfolio = () => {
               <h3>Labb 2</h3>
               <p>Bygger vidare på Labb 1. Nu även med javascript</p>
               <button
-                onClick={() => setShowLabb2Modal(true)}
+                onClick={() =>
+                  openModal(
+                    "Labb2",
+                    "Vi ska bygga vidare på Labb 1 men nu även använda lite js och react. Vi hämtar projekt på denna sida med githubs API."
+                  )
+                }
                 className="read-more"
               >
                 Read more
@@ -102,7 +131,12 @@ const Portfolio = () => {
               <h3>React projects</h3>
               <p>Har gjort flera mindre projekt med React</p>
               <button
-                onClick={() => setShowReactModal(true)}
+                onClick={() =>
+                  openModal(
+                    "React",
+                    "Har övat mycket med React. Gjort enklare project som ToDo List, enklare hemsidor, testat lite olika libraries bl.a framer-motion med olika animationer."
+                  )
+                }
                 className="read-more"
               >
                 Read more
@@ -162,111 +196,12 @@ const Portfolio = () => {
           )}
         </div>
       </main>
-      {showBankAppModal && (
-        <div className="popup active">
-          <div className="popup-inner">
-            <h3>C# Bank app</h3>
-            <p>
-              Som slutarbete i vår C# kurs gjorde vi ett grupparbete. Vi fick en
-              backlog där vi skulle göra en bank. Som administratör till banken
-              skulle man kunna öppna konton, göra insättningar, överföringar
-              samt öppna konton i utländsk valuta. Vi skulle även ha olika
-              användarkonton med olika rättigheter och login.
-            </p>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setShowBankAppModal(false);
-              }}
-              className="popup-button"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-      {showLabb1Modal && (
-        <div className="popup active">
-          <div className="popup-inner">
-            <h3>Labb 1</h3>
-            <p>
-              I vår Frontend kurs så ska vi bygga en egen hemsida. Vi använder
-              endast HTML och CSS, inga ramverk.
-            </p>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setShowLabb1Modal(false);
-              }}
-              className="popup-button"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-      {showEgetProjektModal && (
-        <div className="popup active">
-          <div className="popup-inner">
-            <h3>Eget Projekt</h3>
-            <p>
-              Har gjort flera egna projekt. Har byggt några sidor och börjat
-              lära mig mer och mer. Har även testat på Bootstrap och gjort några
-              projekt.
-            </p>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setShowEgetProjektModal(false);
-              }}
-              className="popup-button"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-      {showLabb2Modal && (
-        <div className="popup active">
-          <div className="popup-inner">
-            <h3>Labb 2</h3>
-            <p>
-              Vi ska bygga vidare på Labb 1 men nu även använda lite js och
-              react. Vi hämtar projekt på denna sida med githubs API.
-            </p>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setShowLabb2Modal(false);
-              }}
-              className="popup-button"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
-      {showReactModal && (
-        <div className="popup active">
-          <div className="popup-inner">
-            <h3>React</h3>
-            <p>
-              Har övat mycket med React. Gjort enklare project som ToDo List,
-              enklare hemsidor, testat lite olika libraries bl.a framer-motion
-              med olika animationer.
-            </p>
-            <button
-              onClick={(e) => {
-                e.preventDefault();
-                setShowReactModal(false);
-              }}
-              className="popup-button"
-            >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+      <Modal
+        isVisible={isModalOpen}
+        closeModal={closeModal}
+        title={modalHeader}
+        message={modalText}
+      />
     </>
   );
 };
