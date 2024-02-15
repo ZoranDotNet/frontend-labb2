@@ -186,7 +186,7 @@ const Portfolio = () => {
         </div>
       )}
       {showLabb1Modal && (
-        <div className="popup active" id="labb1">
+        <div className="popup active">
           <div className="popup-inner">
             <h3>Labb 1</h3>
             <p>
